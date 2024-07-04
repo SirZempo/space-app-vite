@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Cabecera from "./components/Cabecera/index.jsx";
 import GlobalStyles from "./components/GlobalStyles/index.jsx"
 
 const FondoGradiente = styled.div`
@@ -13,6 +14,7 @@ function App() {
     <>
       <FondoGradiente>
         <GlobalStyles></GlobalStyles>
+        <Cabecera></Cabecera>
       </FondoGradiente>
     </>
   )
