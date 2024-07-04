@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import BarraLateral from "./components/BarraLateral/index.jsx";
 import Cabecera from "./components/Cabecera/index.jsx";
 import GlobalStyles from "./components/GlobalStyles/index.jsx"
 
@@ -15,6 +16,7 @@ function App() {
       <FondoGradiente>
         <GlobalStyles></GlobalStyles>
         <Cabecera></Cabecera>
+        <BarraLateral></BarraLateral>
       </FondoGradiente>
     </>
   )

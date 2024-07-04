@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import CampoTexto from "../CampoTexto";
 
 const HeaderEstilizado = styled.header`
     display: flex;
@@ -14,6 +15,7 @@ const Cabecera = () =>{
         <>
             <HeaderEstilizado>
                 <img src="img/logo.png" alt="Logo Space-App" />
+                <CampoTexto></CampoTexto>
             </HeaderEstilizado>
         </>
     );
