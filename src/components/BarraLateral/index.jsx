@@ -15,9 +15,9 @@ const BarraLateral = () =>{
                     <ListaEstilizada>
                         <ItemNavegacion iconoActivo="icon/home-activo.png" iconoInactivo="icon/home-inactivo.png" activo>Inicio</ItemNavegacion>
                         <ItemNavegacion iconoActivo="icon/mas-vistas-activo.png" iconoInactivo="icon/mas-vistas-inactivo.png">Más Vistas</ItemNavegacion>
-                        {/*<ItemNavegacion><a href="">Más Me gusta</a></ItemNavegacion>
-                        <ItemNavegacion><a href="">Nuevas</a></ItemNavegacion>
-                        <ItemNavegacion><a href="">Sorpréndeme</a></ItemNavegacion>*/}
+                        <ItemNavegacion iconoActivo="icon/me-gusta-activo.png" iconoInactivo="icon/me-gusta-inactivo.png">Más Me Gusta</ItemNavegacion>
+                        <ItemNavegacion iconoActivo="icon/nuevas-activo.png" iconoInactivo="icon/nuevas-inactivo.png">Nuevas</ItemNavegacion>
+                        <ItemNavegacion iconoActivo="icon/sorprendeme-activo.png" iconoInactivo="icon/sorprendeme-inactivo.png">Sorpréndame</ItemNavegacion>
                     </ListaEstilizada>
                 </nav>
             </aside>
