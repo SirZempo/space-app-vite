@@ -41,7 +41,7 @@ const Pie = styled.footer`
     align-items: center;
 `;
 
-const Imagen = ({foto, expandida=false}) =>{
+const Imagen = ({foto, expandida=false, solicitarZoom}) =>{
     return (
         <>
             <Figure $expandida={expandida} id={`foto-${foto.id}`}>
@@ -54,7 +54,7 @@ const Imagen = ({foto, expandida=false}) =>{
                             <img src="/icon/favorito.png" alt="Icono de Favorito" />
                         </BotonIcono>
                         {
-                            !expandida && <BotonIcono aria-hidden={expandida}>
+                            !expandida && <BotonIcono aria-hidden={expandida} onClick={()=>solicitarZoom(foto)}>
                                 <img src="/icon/expandir.png" alt="Icono de Expandir" />
                             </BotonIcono>
                         }
