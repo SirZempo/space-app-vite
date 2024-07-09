@@ -37,8 +37,15 @@ const App = () => {
 
   const [fotosGaleria, setFotosGaleria] = useState(fotos);
   const [fotoSelecionada, setfotoSelecionada] = useState(null);
+
   
   const alternarFavorito = (foto) =>{
+    if(foto.id === fotoSelecionada?.id){
+      setfotoSelecionada({
+        ...fotoSelecionada,
+        favorita: !foto.favorita
+      })
+    }
     setFotosGaleria(fotosGaleria.map(fotoGaleria => {
       return {
         ...fotoGaleria,
@@ -61,7 +68,7 @@ const App = () => {
             </ContenidoGaleria>
           </MainContainer>
         </AppContainer>
-        <ModalZoom foto={fotoSelecionada}></ModalZoom>
+        <ModalZoom foto={fotoSelecionada} cerrar={()=> setfotoSelecionada(null)} alternarFavorito={alternarFavorito}></ModalZoom>
       </FondoGradiente>
     </>
   )
