@@ -13,6 +13,22 @@ const Overlay = styled.div`
 const DialogoEstilizado = styled.dialog`
     position: absolute;
     top: 24px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    width: 1156px;
+    display: flex; 
+    justify-content: center;
+    form{
+        button{
+            position: relative;
+            top: 20px;
+            right: 60px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    }
 `;
 
 const ModalZoom = ({foto}) =>{
@@ -24,7 +40,9 @@ const ModalZoom = ({foto}) =>{
                     <DialogoEstilizado open={!!foto}>
                         <Imagen expandida={true} foto={foto}></Imagen>
                         <form action="" method="dialog">
-                            <button>OK</button>
+                            <button>
+                                <img src="/icon/cerrar.png" alt="Cerrar" />
+                            </button>
                         </form>
                     </DialogoEstilizado>
                 </>

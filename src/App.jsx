@@ -37,6 +37,10 @@ const App = () => {
 
   const [fotosGaleria, setFotosGaleria] = useState(fotos);
   const [fotoSelecionada, setfotoSelecionada] = useState(null);
+  
+  const alternarFavorito = (foto) =>{
+    console.log(foto);
+  }
 
   return (
     <>
@@ -48,7 +52,7 @@ const App = () => {
             <BarraLateral></BarraLateral>
             <ContenidoGaleria>
               <Banner texto="La galería más completa del espacio" backgroundImage={fotoEspacio}></Banner>
-              <Galeria seleccionarFoto={foto=>setfotoSelecionada(foto)} fotos={fotosGaleria}></Galeria>
+              <Galeria seleccionarFoto={foto=>setfotoSelecionada(foto)} fotos={fotosGaleria} alternarFavorito={alternarFavorito}></Galeria>
             </ContenidoGaleria>
           </MainContainer>
         </AppContainer>
