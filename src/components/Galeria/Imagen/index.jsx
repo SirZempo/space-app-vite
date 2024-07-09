@@ -42,6 +42,9 @@ const Pie = styled.footer`
 `;
 
 const Imagen = ({foto, expandida=false, solicitarZoom, alternarFavorito}) =>{
+
+    const iconoFavorito = foto.favorita ? "/icon/favorito-activo.png" : "/icon/favorito.png";
+
     return (
         <>
             <Figure $expandida={expandida} id={`foto-${foto.id}`}>
@@ -51,7 +54,7 @@ const Imagen = ({foto, expandida=false, solicitarZoom, alternarFavorito}) =>{
                     <Pie>
                         <h4>{foto.fuente}</h4>
                         <BotonIcono onClick={()=> alternarFavorito(foto)}>
-                            <img src="/icon/favorito.png" alt="Icono de Favorito" />
+                            <img src={iconoFavorito} alt="Icono de Favorito" />
                         </BotonIcono>
                         {
                             !expandida && <BotonIcono aria-hidden={expandida} onClick={()=>solicitarZoom(foto)}>
